@@ -1,24 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main (int argc, char *argv)
 {
-	int nombreMystere;
-	int MAX = 100;
-	int MIN = 1;
+	int nombreMystere, nombreChoix;
+	const int MAX = 100, MIN = 1;
 
 	srand(time(NULL));
-	nombreMystere = (rank() % (MAX -MIN + 1)) + MIN;
+	nombreMystere = (rand() % (MAX -MIN + 1)) + MIN;
 	
-	printf("Bienvenue sur Plus ou Moins !\nLe but de ce jeu est de deviner le Monbre Mystere.");
+	
+	printf("Bienvenue sur Plus ou Moins !\nLe but de ce jeu est de deviner le Monbre Mystere.\n");
 
-	do
+	
+	while(nombreChoix =! nombreMystere)
 	{
 		printf("Quel est le nombre ? ");
-		scanf("%d", nombreChoix);
+		scanf("%d", &nombreChoix);
 
 		if(nombreChoix < nombreMystere)
 		{
 			printf("C'est plus !\n");
 		}
-		else if("
+		else
+		{
+			printf("C'est moins !\n");
+		}
+	}
 
+	printf("Bravo, vous avez trouve le nombre mystere !!!\n");
+
+	return 0;
+}
