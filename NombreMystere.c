@@ -49,7 +49,9 @@ int main (int argc, char *argv[])
               {  
               	  //On demande le nombre
 		  printf("Quel est le nombre ? ");
-                  scanf("%d", &nombreEntrer, nombreCoup++);
+                  scanf("%d", &nombreEntrer); 
+		  //On ajoute une tentative pour calculer le nombre le coups
+		  nombreCoup++;
 		  
 		  //On compare le nombre entré avec le nombre aléatoire
                   if (nombreEntrer > nombreMystere)
@@ -66,27 +68,38 @@ int main (int argc, char *argv[])
               //Mode Versus
               printf("Debut de la partie en Versus !\n=============================\n");
               printf("Joueur 1: Entrer le nombre Mystere\n");
-              scanf("%d", &nombreMystere);
-
+              
+	      //On entre le nombre mystere
+	      scanf("%d", &nombreMystere);
               printf("Joueur 2: Trouver le nombre Mystere\n");
+	    
+	      //On compare le nombre entré avec le nombre aléatoire
               do
               {
-                scanf("%d", &nombreEntrer, nombreCoup++);
-                  if (nombreEntrer > nombreMystere)
+              	  //On demande le nombre
+                  scanf("%d", &nombreEntrer);
+	       	  nombreCoup++;
+ 
+		  //On compare le nombre entré avec le nombre mystere
+ 		  if (nombreEntrer > nombreMystere)
                     printf("C'est Moins!\n");
                   else if (nombreEntrer < nombreMystere)
                     printf("C'est Plus!\n");
                   else
                     printf("Felicitation vous avez trouvez la solution en %d coups!\n", nombreCoup);
-              } while (nombreMystere != nombreEntrer);
-          break;
-          default:
+
+	      } while (nombreMystere != nombreEntrer);
+         break;
+
+ 	 default:
               printf("Le mode de jeu est inconnu!\n");
-          break;}
-              
-           printf("Recommencer ? 1.Oui / 2.Non\n");
-           scanf("%d", &recommencer);
-           }//Fin de boucle pour recommencer la partie
+         break;}
+
+	 //On recommence la boucle complet   
+         printf("Recommencer ? 1.Oui / 2.Non\n");
+         scanf("%d", &recommencer);
+         }//Fin de boucle pour recommencer la partie
+
 
   printf("A bientot\n");
 
