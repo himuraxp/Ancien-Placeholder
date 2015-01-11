@@ -1,5 +1,6 @@
 # Simple-Placeholder
-Git &amp; GitHub - Partie 2 Activité
+
+# NombreMystere.c
 
  * Jeu en mode console PLUS OU MOINS. 
  * Le but de ce jeu est de trouver le NOMBRE MYSTERE. 

@@ -4,6 +4,7 @@
 
 int main (int argc, char *argv)
 {
+<<<<<<< HEAD
 	//Initialisation des variables.
 	int nombreMystere = 0, nombreChoix = 0;
 	const int MAX = 100, MIN = 1;
@@ -16,10 +17,24 @@ int main (int argc, char *argv)
 		
 	//Tant que le nombre entré est different du nombre aléatoire on recommence.  	
 	do
+=======
+	int nombreMystere, nombreChoix;
+	const int MAX = 100, MIN = 1;
+
+	srand(time(NULL));
+	nombreMystere = (rand() % (MAX -MIN + 1)) + MIN;
+	
+	
+	printf("Bienvenue sur Plus ou Moins !\nLe but de ce jeu est de deviner le Monbre Mystere.\n");
+
+	
+	while(nombreChoix =! nombreMystere)
+>>>>>>> a72bad1... plusOuMoins.c
 	{
 		//On demande le nombre.
 		printf("Quel est le nombre ? ");
 		scanf("%d", &nombreChoix);
+<<<<<<< HEAD
 
 		//On compare le nombre entré avec le nombre aléatoire.
 		if (nombreMystere > nombreChoix)
@@ -33,6 +48,20 @@ int main (int argc, char *argv)
 	
 	} while(nombreChoix != nombreMystere);
 
+=======
+
+		if(nombreChoix < nombreMystere)
+		{
+			printf("C'est plus !\n");
+		}
+		else
+		{
+			printf("C'est moins !\n");
+		}
+	}
+
+	printf("Bravo, vous avez trouve le nombre mystere !!!\n");
+>>>>>>> a72bad1... plusOuMoins.c
 
 	return 0;
 }
